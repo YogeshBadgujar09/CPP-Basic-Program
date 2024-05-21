@@ -5,15 +5,14 @@ using namespace std;
 class A{
 	
 	public :
-		
-	virtual	void funA()
+	void funA()
 	{
 		cout << "Function A";
 	}
 };
 
 
-class B : public A{
+class B : virtual public A{
 	
 	public :
 	void funB()
@@ -22,7 +21,7 @@ class B : public A{
 	}
 };
 
-class C : public A{
+class C : virtual public A{
 	
 	public :
 	void funC()
@@ -31,8 +30,7 @@ class C : public A{
 	}
 };
 
-class D : public C , public B{
-	
+class D : public C , public B{	
 	public :
 	void funD()
 	{
